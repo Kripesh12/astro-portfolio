@@ -1,0 +1,21 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kripesh | Portfolio</title>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100">
+    <Navbar />
+    <main class="max-w-6xl mx-auto px-6">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

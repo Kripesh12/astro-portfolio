@@ -1,0 +1,102 @@
+---
+const projects = [
+  {
+    title: "CloudSync Dashboard",
+    description:
+      "A real-time cloud infrastructure monitoring dashboard with live metrics, alerts, and resource management. Built with React, TypeScript, and Go backend.",
+    tags: ["React", "TypeScript", "Go", "WebSocket"],
+    github: "https://github.com",
+    live: "https://example.com",
+  },
+  {
+    title: "DevFlow API Gateway",
+    description:
+      "High-performance API gateway service handling authentication, rate limiting, and request routing for microservices architecture.",
+    tags: ["Go", "NestJS", "Redis", "Docker"],
+    github: "https://github.com",
+    live: "https://example.com",
+  },
+  {
+    title: "TaskMaster Pro",
+    description:
+      "Full-stack project management application with real-time collaboration, Kanban boards, and team analytics dashboard.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+    github: "https://github.com",
+    live: "https://example.com",
+  },
+  {
+    title: "CodeReview Bot",
+    description:
+      "Automated code review tool that integrates with GitHub, providing AI-powered suggestions and code quality metrics.",
+    tags: ["TypeScript", "NestJS", "OpenAI", "GitHub API"],
+    github: "https://github.com",
+  },
+];
+---
+
+<section id="projects" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <!-- Header -->
+    <p class="text-indigo-400 font-medium tracking-widest uppercase mb-4">
+      Portfolio
+    </p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Featured <span class="text-indigo-400">Projects</span>
+    </h2>
+    <p class="text-zinc-400 max-w-2xl mx-auto mb-12">
+      A selection of projects that showcase my skills and passion for building
+      exceptional digital experiences.
+    </p>
+
+    <!-- Projects grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        projects.map((project) => (
+          <article class="p-6 border border-zinc-800 rounded-xl hover:border-indigo-500 transition">
+            <div class="flex items-start justify-between mb-4">
+              <div class="flex gap-3">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-zinc-400 hover:text-indigo-400 transition"
+                    aria-label="View GitHub repository"
+                  >
+                    Github
+                  </a>
+                )}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-zinc-400 hover:text-indigo-400 transition"
+                    aria-label="View live project"
+                  >
+                    Live Project
+                  </a>
+                )}
+              </div>
+            </div>
+
+            <h3 class="text-xl font-semibold mb-2 hover:text-indigo-400 transition">
+              {project.title}
+            </h3>
+            <p class="text-zinc-400 mb-4 leading-relaxed">
+              {project.description}
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-500/10 text-indigo-400">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

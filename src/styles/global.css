@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.glass-link {
+  @apply text-sm font-medium text-neutral-800 transition hover:text-neutral-950;
+}

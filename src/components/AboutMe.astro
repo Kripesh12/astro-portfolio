@@ -1,0 +1,74 @@
+---
+const highlights = [
+  {
+    title: "Clean Code",
+    description:
+      "Writing maintainable, scalable code that stands the test of time.",
+  },
+  {
+    title: "Performance First",
+    description:
+      "Building lightning-fast applications with optimized architecture.",
+  },
+  {
+    title: "User Focused",
+    description:
+      "Creating intuitive experiences that delight users at every step.",
+  },
+];
+---
+
+<section id="about" class="py-24 px-6 bg-zinc-900">
+  <div class="max-w-5xl mx-auto text-center">
+    <!-- Header -->
+    <p class="text-indigo-400 font-medium tracking-widest uppercase mb-4">
+      About Me
+    </p>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Turning Ideas Into <span class="text-indigo-400">Reality</span>
+    </h2>
+    <p class="text-zinc-400 max-w-2xl mx-auto mb-12">
+      With years of experience in fullstack development, I specialize in
+      building robust web applications that solve real-world problems.
+    </p>
+
+    <!-- Main content -->
+    <div class="grid md:grid-cols-2 gap-12 items-start text-left md:text-left">
+      <!-- About text -->
+      <div class="space-y-6">
+        <p class="text-zinc-400 leading-relaxed">
+          I'm a passionate fullstack developer based in Nepal, dedicated to
+          creating seamless digital experiences. My journey in tech started with
+          curiosity and has evolved into a career building products that matter.
+        </p>
+        <p class="text-zinc-400 leading-relaxed">
+          I love working with modern technologies like TypeScript, Go, React,
+          and Next.js to build scalable applications. Whether it's crafting a
+          beautiful frontend or architecting robust backend systems, I bring the
+          same level of attention to detail and passion for excellence.
+        </p>
+        <p class="text-zinc-400 leading-relaxed">
+          When I'm not coding, you'll find me exploring new technologies,
+          contributing to open source, or sharing knowledge with the developer
+          community.
+        </p>
+      </div>
+
+      <!-- Highlights -->
+      <div class="space-y-6">
+        {
+          highlights.map((item) => (
+            <div class="flex items-start gap-4">
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-1">
+                  {item.title}
+                </h3>
+                <p class="text-zinc-400 text-sm">{item.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
